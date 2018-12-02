@@ -1,4 +1,4 @@
-package com.pingan.springbootdemo.controller.dto;
+package com.pingan.springbootdemo.dto;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.AllArgsConstructor;
