@@ -1,14 +1,10 @@
 package com.pingan.springbootdemo;
 
 import com.pingan.springbootdemo.dao.UserRepository;
-import com.pingan.springbootdemo.domain.User;
-import org.junit.Before;
-import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
@@ -26,11 +22,11 @@ public class ApplicationTests {
 
 	@Test
 	public void test() throws Exception {
-		User u1 = userRepository.findByName("AAA");
+		/*User u1 = userRepository.findByName("AAA");
 		System.out.println("第一次查询：" + u1.getAge());
 
 		User u2 = userRepository.findByName("AAA");
-		System.out.println("第二次查询：" + u2.getAge());
+		System.out.println("第二次查询：" + u2.getAge());*/
 	}
 
 }

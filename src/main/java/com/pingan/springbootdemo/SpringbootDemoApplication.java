@@ -2,11 +2,11 @@ package com.pingan.springbootdemo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.builder.SpringApplicationBuilder;
-import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
-import org.springframework.cache.annotation.EnableCaching;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
 
-@EnableCaching
+//@EnableScheduling
+@EnableTransactionManagement
+//@EnableCaching
 @SpringBootApplication
 public class SpringbootDemoApplication /*extends SpringBootServletInitializer*/ {
 
