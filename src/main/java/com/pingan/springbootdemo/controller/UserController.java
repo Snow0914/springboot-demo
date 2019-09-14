@@ -13,8 +13,14 @@ public class UserController {
     @Autowired
     private UserService userService;
 
-    @GetMapping("/users/{name}")
-    public User hello(@PathVariable("name") String name) {
+    @GetMapping("/users/{id}")
+    public User hello(@PathVariable("id") Long id) {
+
+        return userService.findById(id);
+    }
+
+    @GetMapping("/users/byName")
+    public User hello(String name) {
 
         return userService.findByName(name);
     }
