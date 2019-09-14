@@ -1,7 +1,6 @@
 package com.pingan.springbootdemo.domain;
 
-import com.baomidou.mybatisplus.annotations.TableField;
-import com.baomidou.mybatisplus.annotations.TableName;
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -21,7 +20,6 @@ import java.util.Date;
 @AllArgsConstructor
 @Entity
 @Table(name = "tbl_user")
-@TableName("tbl_user")
 public class User implements Serializable {
 
     private static final long serialVersionUID = 5554687692374267740L;

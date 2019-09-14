@@ -8,7 +8,7 @@ import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
-import java.util.Optional;
+import java.util.List;
 
 @CacheConfig(cacheNames = "users")
 @Service
@@ -18,7 +18,7 @@ public class UserService {
     private UserRepository userRepository;
 
     @Cacheable(key = "#root.methodName.concat(#name)")
-    public User findByName(String name) {
+    public List<User> findByName(String name) {
         return userRepository.findByName(name);
     }
 
