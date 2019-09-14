@@ -1,5 +1,8 @@
 package com.pingan.springbootdemo.domain;
 
+import com.baomidou.mybatisplus.annotations.TableField;
+import com.baomidou.mybatisplus.annotations.TableName;
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -11,12 +14,14 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import java.io.Serializable;
+import java.util.Date;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
 @Table(name = "tbl_user")
+@TableName("tbl_user")
 public class User implements Serializable {
 
     private static final long serialVersionUID = 5554687692374267740L;
@@ -30,5 +35,13 @@ public class User implements Serializable {
 
     @Column(nullable = false)
     private Integer age;
+
+    @JsonFormat(pattern = "yyyy-MM-dd")
+    @Column(nullable = false)
+    private Date birthday;
+
+    @Column(name = "create_time")
+    @TableField("create_time")
+    private Date createTime;
 
 }
