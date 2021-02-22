@@ -91,6 +91,8 @@
             <artifactId>spring-cloud-starter-task</artifactId>
             <version>${spring-cloud-task.version}</version>
         </dependency>
+
+
     </dependencies>
 
     <dependencyManagement>
