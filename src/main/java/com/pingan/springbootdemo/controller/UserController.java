@@ -1,6 +1,8 @@
 package com.pingan.springbootdemo.controller;
 
+import com.pingan.springbootdemo.converter.UserConverter;
 import com.pingan.springbootdemo.domain.User;
+import com.pingan.springbootdemo.dto.UserDto;
 import com.pingan.springbootdemo.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -16,9 +18,9 @@ public class UserController {
     private UserService userService;
 
     @GetMapping("/users/{id}")
-    public User hello(@PathVariable("id") Long id) {
-
-        return userService.findById(id);
+    public UserDto hello(@PathVariable("id") Long id) {
+        User user = userService.findById(id);
+        return UserConverter.INSTANCE.convert(user);
     }
 
     @GetMapping("/users/byName")

@@ -2,10 +2,11 @@ package com.pingan.springbootdemo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cache.annotation.EnableCaching;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 //@EnableTask
-@EnableCaching
+//@EnableCaching
+@EnableTransactionManagement
 @SpringBootApplication
 public class SpringbootDemoApplication /*extends SpringBootServletInitializer*/ {
 
